@@ -57,7 +57,8 @@ export default function Pagina() {
   }
 
   return (
-    <main style={{ maxWidth: 760, margin: "0 auto", padding: "40px 20px", fontFamily: "system-ui, sans-serif", color: "#1f1b3a" }}>
+    <main style={{ maxWidth: 960, margin: "0 auto", padding: "40px 20px", fontFamily: "system-ui, sans-serif", color: "#1f1b3a", display: "flex", flexWrap: "wrap", gap: 32, alignItems: "flex-start" }}>
+      <div style={{ flex: "1 1 480px", minWidth: 0, maxWidth: 760 }}>
       <h1 style={{ fontSize: 28, marginBottom: 4 }}>Mi asistente</h1>
       <p style={{ color: "#6b6785", marginTop: 0 }}>Escriba una pregunta. El asistente responde con los documentos de la carpeta <code>context</code> y dice de dónde salió el dato.</p>
 
@@ -124,6 +125,23 @@ export default function Pagina() {
           )}
         </section>
       )}
+      </div>
+      <aside style={{ flex: "0 0 150px", display: "flex", justifyContent: "center" }}>
+        <svg viewBox="0 0 120 150" width="150" role="img" aria-label="Robot asistente">
+          <line x1="60" y1="14" x2="60" y2="24" stroke="#1f1b3a" strokeWidth="4" />
+          <circle cx="60" cy="10" r="6" fill="#ff5a36" />
+          <rect x="20" y="24" width="80" height="60" rx="16" fill="#1f1b3a" />
+          <circle cx="44" cy="54" r="10" fill="#ffffff" />
+          <circle cx="76" cy="54" r="10" fill="#ffffff" />
+          <circle cx="46" cy="55" r="4" fill="#1f1b3a" />
+          <circle cx="78" cy="55" r="4" fill="#1f1b3a" />
+          <rect x="42" y="68" width="36" height="6" rx="3" fill="#ff5a36" />
+          <rect x="30" y="92" width="60" height="50" rx="12" fill="#ff5a36" />
+          <circle cx="60" cy="117" r="8" fill="#faf8f3" />
+          <rect x="8" y="94" width="14" height="36" rx="7" fill="#1f1b3a" />
+          <rect x="98" y="94" width="14" height="36" rx="7" fill="#1f1b3a" />
+        </svg>
+      </aside>
     </main>
   );
 }
